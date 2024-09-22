@@ -38,6 +38,8 @@ all:
 
     wireguard_port: "51820"
 
+    xui_host: "xui.{{ root_host }}"
+
     # Possible choices: cloudflare, quad9, google
     #
     # In case you've enabled Adguard, Unbound and DoH functionality,
@@ -91,6 +93,12 @@ all:
       - desc: "Allow Wireguard"
         proto: udp
         port: "{{ wireguard_port }}"
+      - desc: "Allow X-UI HTTP"
+        proto: tcp
+        port: "8080"
+      - desc: "Allow X-UI HTTPS"
+        proto: tcp
+        port: "8443"
       - desc: "Allow HTTP"
         proto: tcp
         port: "80"

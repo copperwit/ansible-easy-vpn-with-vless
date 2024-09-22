@@ -57,6 +57,10 @@
       tags:
         - wireguard
 
+    - role: x-ui
+      tags:
+        - x-ui
+
     - role: chriswayg.msmtp-mailer
       when: email_password is defined
       tags:
