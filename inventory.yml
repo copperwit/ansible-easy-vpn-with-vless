@@ -93,6 +93,9 @@ all:
       - desc: "Allow Wireguard"
         proto: udp
         port: "{{ wireguard_port }}"
+      - desc: "Allow X-UI Web"
+        proto: tcp
+        port: "54321"
       - desc: "Allow X-UI HTTP"
         proto: tcp
         port: "8080"
